@@ -1,0 +1,34 @@
+@import "../font-sizing";
+
+.Title {
+  color : var(--text-color);
+  
+  &__heading {
+    font-weight : $font-weight-bold;
+    
+    &--60 {
+      font-size : $font-size-h1;
+    }
+    
+    &--48 {
+      font-size : $font-size-h2;
+    }
+    
+    &--24 {
+      font-size : $font-size-h3;
+    }
+  }
+  
+  &__secondary {
+    font-weight : $font-weight-light;
+    margin-top  : 2.4rem;
+    
+    &--24 {
+      font-size : $font-size-h3;
+    }
+    
+    &--16 {
+      font-size : $font-size-regular;
+    }
+  }
+}

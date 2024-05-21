@@ -1,0 +1,9 @@
+@import "colors";
+
+:root, :host {
+  --page-accent-color    : #{$dark-blue};
+  --page-primary-color   : #{$blue};
+  --page-secondary-color : #{$light-blue};
+  --text-color           : #{$dark-text};
+  --page-bg-color        : #{$white};
+}

@@ -1,0 +1,82 @@
+@import "../vendor/flex-box-grid/main";
+@import "../font-sizing";
+@import "../colors";
+@import "../variables";
+
+.Header {
+  position : fixed;
+  left     : 0;
+  right    : 0;
+  top      : 0;
+  
+  &__logo {
+    display          : block;
+    width            : 12rem;
+    height           : 5rem;
+    background-color : black;
+  }
+  
+  &__content {
+    @include between();
+    @include middle();
+    height: 6.8rem;
+  }
+  
+  &__burger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 6.8rem;
+    cursor : pointer;
+    
+    @media screen and (min-width: $md-start) {
+      display: none;
+    }
+    
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 2rem;
+      width: 3rem;
+      
+      span {
+        display: inline-block;
+        width: 100%;
+        height: .2rem;
+        background-color: var(--text-color);
+        border-radius: .8rem;
+      }
+    }
+  }
+  
+  &__navigation {
+    height: 100%;
+    @media screen and (min-width: $md-start) {
+    
+    }
+    
+    
+    &__item {
+      height: 100%;
+      list-style : none;
+      
+      a {
+        display         : flex;
+        align-items     : center;
+        text-align      : center;
+        font-size: $font-size-regular;
+        color: var(--text-color);
+        height          : 100%;
+        text-decoration : none;
+        padding         : 0 2.4rem;
+        
+        &:hover, &.active {
+          color: var(--page-bg-color);
+          background-color: var(--page-primary-color);
+        }
+      }
+    }
+  }
+}
