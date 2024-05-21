@@ -1,0 +1,21 @@
+.ImageSection {
+  position   : relative;
+  height     : 80vh;
+  max-height : 82rem;
+  overflow   : hidden;
+  
+  &__bg-img {
+    position              : absolute;
+    width                 : 100%;
+    height                : 100%;
+    background-size       : cover;
+    background-repeat     : no-repeat;
+    background-attachment : fixed;
+    background-position   : center;
+  }
+  
+  &__content {
+    position : relative;
+    height   : 100%;
+  }
+}

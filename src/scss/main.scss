@@ -1,0 +1,41 @@
+@import "vendor/flex-box-grid/main";
+@import "colors";
+@import "variables";
+@import "font-sizing";
+@import "utils/utils";
+
+* {
+  box-sizing : border-box;
+  margin     : 0;
+  padding    : 0;
+}
+
+html {
+  height    : 100%;
+  font-size : 65%;
+}
+
+body {
+  display          : flex;
+  flex-direction   : column;
+  height           : 100%;
+  min-width        : 100%;
+  background-color : var(--page-bg-color);
+  font-family: "Oswald", sans-serif;
+}
+
+main {
+  height : 100%;
+}
+
+.wrapper {
+  max-width    : 136.8rem;
+  margin-left  : auto;
+  margin-right : auto;
+}
+
+.container-fluid {
+  padding-left  : 5rem;
+  padding-right : 5rem;
+}
+
