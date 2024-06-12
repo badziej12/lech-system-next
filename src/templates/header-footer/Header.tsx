@@ -1,5 +1,5 @@
 'use client'
-
+import { useEffect, useState } from 'react';
 import '@/scss/header-footer/header.scss';
 
 import {usePathname} from 'next/navigation';
@@ -8,13 +8,19 @@ import Link from 'next/link'
 export function Header() {
     const pathname = usePathname();
 
+    const [isActive, setIsActive] = useState(false);
+
+    const handleClick = () => {
+        setIsActive(!isActive);
+    };
+
     return (
         <header className="Header">
             <div className="container-fluid wrapper">
                 <div className="Header__content flex">
-                    <a href=""
-                       className="Header__logo"></a>
-                    <div className="Header__burger-btn">
+                    <Link className="Header__logo" href="/">
+                    </Link>
+                    <div className={`Header__burger-btn ${isActive ? 'active' : ''}`} onClick={handleClick}>
                         <div>
                             <span></span>
                             <span></span>

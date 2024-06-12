@@ -35,6 +35,10 @@ main {
 }
 
 .container-fluid {
+  @media screen and (max-width: $md-max) {
+    padding-left  : 1.6rem;
+    padding-right : 1.6rem;
+  }
   padding-left  : 5rem;
   padding-right : 5rem;
 }
