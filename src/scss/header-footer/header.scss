@@ -4,11 +4,12 @@
 @import "../variables";
 
 .Header {
-  position      : fixed;
-  left          : 0;
-  right         : 0;
-  top           : 0;
-  //border-bottom : .1rem solid var(--page-accent-color);
+  position   : fixed;
+  left       : 0;
+  right      : 0;
+  top        : 0;
+  z-index    : 999;
+  background : white;
   
   &__logo {
     display          : block;
@@ -82,10 +83,6 @@
           }
         }
       }
-      
-      + .Header__navigation {
-        max-height : 40rem;
-      }
     }
   }
   
@@ -101,18 +98,23 @@
     transition     : .6s ease-in-out;
     border-bottom  : .1rem solid var(--page-accent-color);
     
+    &.active {
+      max-height : 100vh;
+    }
+    
     @media screen and (min-width : $lg-start) {
       position       : static;
       flex-direction : row;
       height         : 100%;
-      max-width      : unset;
+      max-height     : unset;
       border-bottom  : none;
     }
     
     
     &__item {
-      height     : 100%;
-      list-style : none;
+      height           : 100%;
+      list-style       : none;
+      background-color : var(--page-bg-color);
       
       a {
         display         : flex;

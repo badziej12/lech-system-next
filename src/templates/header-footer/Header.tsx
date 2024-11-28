@@ -27,7 +27,7 @@ export function Header() {
                             <span></span>
                         </div>
                     </div>
-                    <ul className="Header__navigation flex">
+                    <ul className={`Header__navigation flex ${isActive ? 'active' : ''}`}>
                         <li className="Header__navigation__item">
                             <Link className={`${pathname === '/' ? 'active' : ''}`} href="/">
                                 Strona główna
