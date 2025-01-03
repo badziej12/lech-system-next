@@ -1,34 +1,50 @@
-@import "../font-sizing";
+@import '../font-sizing';
+@import '../mixins';
 
 .Title {
-  color : var(--text-color);
-  
   &__heading {
-    font-weight : $font-weight-bold;
-    
-    &--60 {
-      font-size : $font-size-h1;
+    font-family: Gotu, serif;
+    font-weight: $font-weight-regular;
+    color: var(--page-primary-color);
+
+    &--64 {
+      font-size: $font-size-h1;
+
+      @include media-md {
+        font-size: $font-size-h2;
+      }
     }
-    
-    &--48 {
-      font-size : $font-size-h2;
+
+    &--42 {
+      font-size: $font-size-h2;
+
+      @include media-md {
+        font-size: $font-size-h2s;
+      }
     }
-    
-    &--24 {
-      font-size : $font-size-h3;
+
+    &--20 {
+      font-size: $font-size-h3;
     }
   }
-  
+
   &__secondary {
-    font-weight : $font-weight-light;
-    margin-top  : 2.4rem;
-    
-    &--24 {
-      font-size : $font-size-h3;
+    font-weight: $font-weight-light;
+    margin-top: 3.2rem;
+    color: var(--text-color);
+
+    &--20 {
+      font-size: $font-size-h3;
     }
-    
-    &--16 {
-      font-size : $font-size-regular;
+
+    &--18 {
+      font-size: $font-size-regular;
+      line-height: 2.8rem;
+
+      @include media-md {
+        font-size: $font-size-sm;
+        line-height: 2.4rem;
+      }
     }
   }
 }

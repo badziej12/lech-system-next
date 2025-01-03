@@ -1,1 +1,31 @@
-@import "vendor/flex-box-grid/mixins/main";
+@import 'screen-sizing';
+
+@mixin media-sm {
+  @media screen and (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media screen and (max-width: $screen-xxl) {
+    @content;
+  }
+}

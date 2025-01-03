@@ -1,47 +1,47 @@
-$sizes : (
-        "16"    : $font-size-regular,
-        "24"    : $font-size-h3,
-        "48"    : $font-size-h2,
-        "60"    : $font-size-h1,
-        "md-16" : $font-size-regular,
-        "md-24" : $font-size-h3,
-        "md-48" : $font-size-h2,
-        "md-60" : $font-size-h1,
+$sizes: (
+  '16': $font-size-regular,
+  '24': $font-size-h3,
+  '48': $font-size-h2,
+  '60': $font-size-h1,
+  'md-16': $font-size-regular,
+  'md-24': $font-size-h3,
+  'md-48': $font-size-h2,
+  'md-60': $font-size-h1,
 );
 
+/* stylelint-disable */
 @each $item in $sizes {
-  $size  : nth($item, 1);
-  $value : nth($item, 2);
+  $size: nth($item, 1);
+  $value: nth($item, 2);
 
   .text-#{$size} {
-    @if str-index($size, "md") {
-      @media (min-width : $md-start) {
-        font-size : #{$value};
+    @if str-index($size, 'md') {
+      @media (min-width: $screen-md) {
+        font-size: #{$value};
       }
-    }
-    @else {
-      font-size : #{$value};
+    } @else {
+      font-size: #{$value};
     }
   }
 }
+/* stylelint-enable */
 
 .font-weight-black {
-  font-weight : $font-weight-black;
+  font-weight: $font-weight-black;
 }
 
 .font-weight-bold {
-  font-weight : $font-weight-bold;
+  font-weight: $font-weight-bold;
 }
 
 .font-weight-medium {
-  font-weight : $font-weight-medium;
+  font-weight: $font-weight-medium;
 }
 
 .font-weight-regular {
-  font-weight : $font-weight-regular;
+  font-weight: $font-weight-regular;
 }
 
 .font-weight-light {
-  font-weight : $font-weight-light;
+  font-weight: $font-weight-light;
 }
-

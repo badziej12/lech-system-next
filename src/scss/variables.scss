@@ -1,9 +1,11 @@
-@import "colors";
+@import 'colors';
 
-:root, :host {
-  --page-accent-color    : #{$dark-blue};
-  --page-primary-color   : #{$blue};
-  --page-secondary-color : #{$light-blue};
-  --text-color           : #{$dark-text};
-  --page-bg-color        : #{$white};
+:root,
+:host {
+  --page-accent-color: #{$orange};
+  --page-primary-color: #{$beige};
+  --page-secondary-color: #{$light-beige};
+  --text-color: #{$white};
+  --text-color-dark: #{$black};
+  --page-bg-color: #{$black-02};
 }
