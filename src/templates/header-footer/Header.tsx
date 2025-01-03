@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import '@/scss/header-footer/header.scss';
 
 import {usePathname} from 'next/navigation';
@@ -16,7 +16,7 @@ export function Header() {
 
     return (
         <header className="Header">
-            <div className="container-fluid wrapper">
+            <div className="wrapper">
                 <div className="Header__content flex">
                     <Link className="Header__logo" href="/">
                     </Link>

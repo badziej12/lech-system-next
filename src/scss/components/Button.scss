@@ -1,0 +1,30 @@
+@import '../font-sizing';
+@import '../mixins';
+
+.Button {
+  display: inline-block;
+  border: 0.2rem solid var(--text-color);
+  transition: 0.2s;
+
+  a {
+    display: inline-block;
+    color: var(--text-color);
+    font-family: Mulish, serif;
+    font-size: $font-size-regular;
+    padding: 2rem 4rem;
+    transition: 0.2s;
+
+    @include media-md {
+      font-size: $font-size-sm;
+      padding: 1.6rem 3.2rem;
+    }
+  }
+
+  &:hover {
+    border: 0.2rem solid var(--page-primary-color);
+
+    a {
+      color: var(--page-primary-color);
+    }
+  }
+}

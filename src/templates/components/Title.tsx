@@ -18,8 +18,8 @@ function Title(
     secondary_tag = 'p',
     heading_text = '',
     secondary_text = '',
-    heading_size = '60',
-    secondary_size = '16',
+    heading_size = '64',
+    secondary_size = '18',
     custom_class = ''
   }: TitleProps,
 ) {
@@ -32,7 +32,7 @@ function Title(
   return (
     <div className={titleClass}>
       <HeadingTag className={headingClass} dangerouslySetInnerHTML={{ __html: heading_text }}></HeadingTag>
-      <SecondaryTag className={secondaryClass}>{secondary_text}</SecondaryTag>
+      <SecondaryTag className={secondaryClass} dangerouslySetInnerHTML={{ __html: secondary_text }}></SecondaryTag>
     </div>
   );
 }

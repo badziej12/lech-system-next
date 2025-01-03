@@ -1,48 +1,38 @@
+@import '../screen-sizing';
+
 .hidden {
   &--to-lg {
-    @media (min-width : $lg-max + 1) {
+    @media (min-width: $screen-lg + 1) {
       display: none !important;
     }
   }
-  
+
   &--to-md {
-    @media (min-width : $md-max + 1) {
+    @media (min-width: $screen-md + 1) {
       display: none !important;
     }
   }
-  
+
   &--to-sm {
-    @media (min-width : $sm-max + 1) {
+    @media (min-width: $screen-sm + 1) {
       display: none !important;
     }
   }
-  
-  &--to-xs {
-    @media (min-width : $xs-max + 1) {
-      display: none !important;
-    }
-  }
-  
+
   &--from-lg {
-    @media (max-width : $lg-max) {
+    @media (max-width: $screen-lg) {
       display: none !important;
     }
   }
-  
+
   &--from-md {
-    @media (max-width : $md-max) {
+    @media (max-width: $screen-md) {
       display: none !important;
     }
   }
-  
+
   &--from-sm {
-    @media (max-width : $sm-max) {
-      display: none !important;
-    }
-  }
-  
-  &--from-xs {
-    @media (max-width : $xs-max) {
+    @media (max-width: $screen-sm) {
       display: none !important;
     }
   }

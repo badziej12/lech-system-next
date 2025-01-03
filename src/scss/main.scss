@@ -1,46 +1,46 @@
-@import "vendor/flex-box-grid/main";
-@import "colors";
-@import "variables";
-@import "font-sizing";
-@import "utils/utils";
+@import 'colors';
+@import 'variables';
+@import 'font-sizing';
+@import 'utils/utils';
+@import 'mixins';
+@import 'vendor/flexboxgrid';
 
 * {
-  box-sizing : border-box;
-  margin     : 0;
-  padding    : 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-  height    : 100%;
-  font-size : 65%;
+  height: 100%;
+  font-size: 65%;
 }
 
 body {
-  display          : flex;
-  flex-direction   : column;
-  height           : 100%;
-  min-width        : 100%;
-  background-color : var(--page-bg-color);
-  font-family      : "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 100%;
+  background-color: var(--page-bg-color);
+  font-family: Mulish, serif;
 }
 
 main {
-  height     : 100%;
-  margin-top : 6.8rem;
+  margin-top: 9.6rem;
 }
 
 .wrapper {
-  max-width    : 136.8rem;
-  margin-left  : auto;
-  margin-right : auto;
+  max-width: 136.8rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-fluid {
-  @media screen and (max-width : $md-max) {
-    padding-left  : 1.6rem;
-    padding-right : 1.6rem;
+  @include media-md {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
-  padding-left  : 5rem;
-  padding-right : 5rem;
-}
 
+  padding-left: 9.6rem;
+  padding-right: 9.6rem;
+}

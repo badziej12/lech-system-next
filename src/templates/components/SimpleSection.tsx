@@ -5,15 +5,17 @@ import '@/scss/components/SimpleSection.scss';
 export function ImageSection(
     {
         children,
+        sectionClass,
     }: Readonly<{
       children?: React.ReactNode;
+      sectionClass?: string;
     }>
 ) {
 
 
     return (
-        <section className="SimpleSection">
-          <div className="container-fluid">
+        <section className={`SimpleSection ${sectionClass}`}>
+          <div className="wrapper container-fluid">
             {children}
           </div>
         </section>
