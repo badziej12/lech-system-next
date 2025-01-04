@@ -1,10 +1,24 @@
 @import '../colors';
+@import '../mixins';
+@import '../font-sizing';
 
 .Home {
   .about-section {
     &__image-container {
+      display: flex;
+      justify-content: center;
+
       picture {
         position: relative;
+        display: inline-block;
+
+        img {
+          max-height: 70rem;
+
+          @include media-md {
+            max-height: 50rem;
+          }
+        }
 
         &::after {
           content: '';
@@ -23,6 +37,141 @@
     span {
       color: var(--page-primary-color);
       text-shadow: 0 0.4rem 0.4rem $black;
+    }
+  }
+
+  .statistic-section {
+    padding: 4.8rem 0;
+    background-color: var(--page-secondary-color);
+    color: var(--page-primary-color);
+
+    &__container {
+      @include media-lg {
+        row-gap: 3.2rem;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: $font-size-regular;
+      font-weight: $font-weight-light;
+
+      @include media-md {
+        font-size: $font-size-sm;
+      }
+
+      span {
+        display: block;
+        font-size: $font-size-h2;
+        font-family: Gotu, serif;
+
+        @include media-md {
+          font-size: $font-size-h2s;
+        }
+      }
+    }
+  }
+
+  .why-us-section {
+    padding: 9.6rem 0;
+
+    @include media-md {
+      padding: 4.8rem 0;
+    }
+
+    .Title {
+      text-align: center;
+      margin-bottom: 4.8rem;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      min-height: 60rem;
+      justify-content: unset;
+
+      @include media-lg {
+        justify-content: space-between;
+      }
+
+      &--hide-to-lg {
+        display: flex;
+
+        @include media-lg {
+          display: none;
+        }
+      }
+
+      &:first-child {
+        padding-right: 4.8rem;
+      }
+
+      &:last-child {
+        padding-left: 4.8rem;
+
+        @include media-lg {
+          padding-left: 1rem;
+        }
+      }
+    }
+
+    &__item {
+      color: var(--text-color);
+      flex-basis: 50%;
+
+      @include media-lg {
+        flex-basis: auto;
+      }
+
+
+      &--hide-from-lg {
+        display: none;
+
+        @include media-lg {
+          display: block;
+        }
+      }
+
+      &__content {
+        border-left: .2rem solid var(--page-accent-color);
+        padding-left: 2rem;
+
+        h3 {
+          font-weight: $font-weight-bold;
+          margin-bottom: 2.4rem;
+          font-size: $font-size-h3;
+        }
+
+        p {
+          font-size: $font-size-regular;
+          font-weight: $font-weight-regular;
+
+          @include media-md {
+            font-size: $font-size-sm;
+          }
+        }
+      }
+    }
+
+    &__image-container {
+      display: flex;
+      justify-content: center;
+
+      picture {
+        display: inline-block;
+
+        img {
+          max-height: 70rem;
+
+          @include media-md {
+            max-height: 50rem;
+          }
+        }
+      }
+
+      @include media-md {
+        margin-bottom: 4.8rem;
+      }
     }
   }
 }
