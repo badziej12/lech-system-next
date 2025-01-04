@@ -4,6 +4,7 @@ import SimpleSection from '@/templates/components/SimpleSection';
 import Title from '@/templates/components/Title';
 import Button from "@/templates/components/Button";
 import BannerSection from "@/templates/components/BannerSection";
+import ReviewBox from "@/templates/components/ReviewBox";
 
 
 export default function Home() {
@@ -143,6 +144,22 @@ export default function Home() {
                 </div>
             </SimpleSection>
             <BannerSection backgroundImg={bg_image_section_4_jpg} bannerCopy="Zadzwoń teraz" buttonCopy="Kontakt" buttonLink="/kontakt" />
+            <SimpleSection sectionClass="reviews-section">
+                <div className="center-xs">
+                    <Title heading_text="Recenzje" heading_tag="h2" heading_size="42" />
+                </div>
+                <div className="reviews-section__row">
+                    <div>
+                        <ReviewBox personNickname="Kowalski" personReview="osijdaoisjdoajsdoi asojdiaosjd asoid" />
+                    </div>
+                    <div>
+                        <ReviewBox personNickname="Kowalski" personReview="osijdaoisjdoajsdoi asojdiaosjd asoid" />
+                    </div>
+                    <div>
+                        <ReviewBox personNickname="Kowalski" personReview="osijdaoisjdoajsdoi asojdiaosjd asoid" />
+                    </div>
+                </div>
+            </SimpleSection>
         </main>
     );
 }
