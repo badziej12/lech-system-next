@@ -1,0 +1,79 @@
+@import "../font-sizing";
+@import "../mixins";
+
+.Footer {
+  padding: 9.6rem 0;
+  background-color: var(--page-primary-color);
+
+  &__heading {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-bold;
+    margin-bottom: 2.4rem;
+  }
+
+  &__contact-container {
+    height: 100%;
+
+    div {
+      height: 50%;
+    }
+
+    &__email,
+    &__address,
+    &__phone {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.4rem;
+      transition: .15s;
+
+      svg {
+        display: inline-block;
+        height: 1.8rem;
+        margin-right: 1.6rem;
+      }
+
+      &:hover {
+        color : var(--text-color);
+      }
+    }
+  }
+
+  &__socials {
+    @include media-md {
+      margin-top: 3.2rem;
+    }
+
+    a {
+      display: inline-block;
+      transition: .15s;
+
+      svg {
+        height: 3.2rem;
+      }
+
+      &:hover {
+        color: var(--text-color);
+      }
+    }
+  }
+
+  p, li {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-light;
+  }
+
+  ul {
+    li {
+      margin-bottom: 2.4rem;
+      transition: .15s;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: var(--text-color);
+      }
+    }
+  }
+}
