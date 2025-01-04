@@ -1,10 +1,12 @@
-import ImageSection from '@/templates/components/ImageSection';
 import "../scss/pages/Home.scss";
+import ImageSection from '@/templates/components/ImageSection';
 import SimpleSection from '@/templates/components/SimpleSection';
 import Title from '@/templates/components/Title';
 import Button from "@/templates/components/Button";
 import BannerSection from "@/templates/components/BannerSection";
-
+import ReviewBox from "@/templates/components/ReviewBox";
+import {ReactGoogleReviews} from "react-google-reviews";
+import ReviewsSection from "@/templates/components/ReviewsSection";
 
 export default function Home() {
     const image_section_1_webp = "assets/images/home/home-main-image.jpg";
@@ -18,6 +20,9 @@ export default function Home() {
     const image_section_3_webp_2x = "assets/images/home/home-image-3@2x.webp";
     const image_section_3_png_2x = "assets/images/home/home-image-3@2x.png";
     const bg_image_section_4_jpg = "url('assets/images/home/home-image-4.jpg')";
+
+    const featurableAPIKey = process.env.FEATURABLE_API_KEY as string;
+    console.log(featurableAPIKey);
 
     return (
         <main className="Home flex flex-col">
@@ -59,7 +64,7 @@ export default function Home() {
                           a na wykonane prace udzielam 2-letniej gwarancji. Skontaktuj się ze mną, aby stworzyć estetyczne
                            i funkcjonalne rozwiązania dopasowane do Twoich potrzeb."
                                        heading_size="42"
-                                       heading_tag="h2" />
+                                       heading_tag="h2"/>
                             </div>
                         </div>
                     </div>
@@ -82,16 +87,17 @@ export default function Home() {
                 </div>
             </SimpleSection>
             <SimpleSection sectionClass="why-us-section">
-                <Title heading_text="Dlaczego my?" heading_size="42" heading_tag="h2" />
+                <Title heading_text="Dlaczego my?" heading_size="42" heading_tag="h2"/>
                 <div className="row">
-                    <div className="why-us-section__container why-us-section__container--hide-to-lg col-xs-12 col-md-6 col-lg-4">
+                    <div
+                        className="why-us-section__container why-us-section__container--hide-to-lg col-xs-12 col-md-6 col-lg-4">
                         <div className="why-us-section__item">
                             <div className="why-us-section__item__content">
                                 <h3>Projesjonalizm i doświadczenie</h3>
                                 <p>Bogate doświadczenie w branży i gwarancja wysokiej jakości świadczonych
                                     usług.</p>
                             </div>
-                            </div>
+                        </div>
                         <div className="why-us-section__item">
                             <div className="why-us-section__item__content">
                                 <h3>Gwarancja 2-letnia</h3>
@@ -142,7 +148,14 @@ export default function Home() {
                     </div>
                 </div>
             </SimpleSection>
-            <BannerSection backgroundImg={bg_image_section_4_jpg} bannerCopy="Zadzwoń teraz" buttonCopy="Kontakt" buttonLink="/kontakt" />
+            <BannerSection backgroundImg={bg_image_section_4_jpg} bannerCopy="Zadzwoń teraz" buttonCopy="Kontakt"
+                           buttonLink="/kontakt"/>
+            <SimpleSection sectionClass="reviews-section">
+                <div className="center-xs">
+                    <Title heading_text="Recenzje" heading_tag="h2" heading_size="42"/>
+                </div>
+                <ReviewsSection featurableAPIKey={featurableAPIKey} />
+            </SimpleSection>
         </main>
     );
 }
