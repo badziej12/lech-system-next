@@ -176,18 +176,27 @@
   }
 
   .reviews-section {
-    padding : 9.6rem 0;
+    padding: 9.6rem 0;
 
     @include media-md {
-      padding : 4.8rem 0;
+      padding: 4.8rem 0;
     }
 
     &__row {
       display: flex;
-      gap: 4rem;
+      gap: 3.33%;
 
       @include media-md {
         flex-direction: column;
+        gap: 3.2rem;
+
+        > div {
+          flex-basis: auto;
+        }
+      }
+
+      > div {
+        flex-basis: 30%;
       }
     }
   }
