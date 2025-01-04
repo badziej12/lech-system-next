@@ -3,6 +3,7 @@ import "./globals.css";
 import "../scss/main.scss";
 
 import {Header} from '@/templates/header-footer/Header';
+import {Footer} from "@/templates/header-footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
