@@ -3,6 +3,7 @@ import "../scss/pages/Home.scss";
 import SimpleSection from '@/templates/components/SimpleSection';
 import Title from '@/templates/components/Title';
 import Button from "@/templates/components/Button";
+import BannerSection from "@/templates/components/BannerSection";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     const image_section_3_png = "assets/images/home/home-image-3.png";
     const image_section_3_webp_2x = "assets/images/home/home-image-3@2x.webp";
     const image_section_3_png_2x = "assets/images/home/home-image-3@2x.png";
+    const bg_image_section_4_jpg = "url('assets/images/home/home-image-4.jpg')";
 
     return (
         <main className="Home flex flex-col">
@@ -86,7 +88,7 @@ export default function Home() {
                         <div className="why-us-section__item">
                             <div className="why-us-section__item__content">
                                 <h3>Projesjonalizm i doświadczenie</h3>
-                                <p>Firma Rolux ma bogate doświadczenie w branży i gwarantuje wysoką jakość świadczonych
+                                <p>Bogate doświadczenie w branży i gwarancja wysokiej jakości świadczonych
                                     usług.</p>
                             </div>
                             </div>
@@ -113,7 +115,7 @@ export default function Home() {
                         <div className="why-us-section__item why-us-section__item--hide-from-lg">
                             <div className="why-us-section__item__content">
                                 <h3>Projesjonalizm i doświadczenie</h3>
-                                <p>Firma Rolux ma bogate doświadczenie w branży i gwarantuje wysoką jakość świadczonych
+                                <p>Bogate doświadczenie w branży i gwarancja wysokiej jakości świadczonych
                                     usług.</p>
                             </div>
                         </div>
@@ -127,7 +129,7 @@ export default function Home() {
                         <div className="why-us-section__item">
                             <div className="why-us-section__item__content">
                                 <h3>Bezpłatne wsparcie klientom</h3>
-                                <p>Firma Rolux oferuje kompleksowe doradztwo, pomiary oraz wycenę bez dodatkowych opłat
+                                <p>Kompleksowe doradztwo, pomiary oraz wycena bez dodatkowych opłat
                                     dla klientów.</p>
                             </div>
                         </div>
@@ -140,6 +142,7 @@ export default function Home() {
                     </div>
                 </div>
             </SimpleSection>
+            <BannerSection backgroundImg={bg_image_section_4_jpg} bannerCopy="Zadzwoń teraz" buttonCopy="Kontakt" buttonLink="/kontakt" />
         </main>
     );
 }

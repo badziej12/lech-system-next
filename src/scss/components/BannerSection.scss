@@ -1,0 +1,35 @@
+.BannerSection {
+  padding: 12rem 0;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--page-secondary-color);
+    opacity: .8;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .Button {
+    border: 0.2rem solid var(--page-primary-color);
+
+    a {
+      color: var(--page-primary-color);
+    }
+
+    &:hover {
+      border: 0.2rem solid var(--text-color);
+
+      a {
+        color : var(--text-color);
+      }
+    }
+  }
+}
