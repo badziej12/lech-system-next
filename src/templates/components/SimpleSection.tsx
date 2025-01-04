@@ -5,7 +5,7 @@ import '@/scss/components/SimpleSection.scss';
 export function ImageSection(
     {
         children,
-        sectionClass,
+        sectionClass = '',
     }: Readonly<{
       children?: React.ReactNode;
       sectionClass?: string;

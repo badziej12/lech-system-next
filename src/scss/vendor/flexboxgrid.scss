@@ -1,4 +1,5 @@
 /* Uncomment and set these variables to customize the grid. */
+@import "../screen-sizing";
 
 .container-fluid {
   margin-right: auto;
@@ -240,7 +241,7 @@
   order: 1;
 }
 
-@media only screen and (width >= 48em) {
+@media only screen and (width >= $screen-sm) {
   .container {
     width: 46rem;
   }
@@ -453,7 +454,7 @@
   }
 }
 
-@media only screen and (width >= 62em) {
+@media only screen and (width >= $screen-md) {
   .container {
     width: 61rem;
   }
@@ -666,7 +667,7 @@
   }
 }
 
-@media only screen and (width >= 75em) {
+@media only screen and (width >= $screen-lg) {
   .container {
     width: 71rem;
   }
