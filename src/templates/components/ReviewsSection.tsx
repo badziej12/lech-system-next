@@ -21,8 +21,6 @@ function ReviewsSection(
                 <div className="reviews-section__row">
                     {reviews.slice(0, 3).map(({reviewId, reviewer, comment}) => {
                         const cleanedComment = comment.replace(/\(Translated by Google\)(.*?)\(Original\)/is, '').trim();
-                        console.log('Original Comment:', comment);
-                        console.log('Cleaned Comment:', cleanedComment);
 
                         return (
                             <div key={reviewId}>

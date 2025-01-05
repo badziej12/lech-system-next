@@ -7,10 +7,10 @@ import BannerSection from "@/templates/components/BannerSection";
 import ReviewBox from "@/templates/components/ReviewBox";
 import {ReactGoogleReviews} from "react-google-reviews";
 import ReviewsSection from "@/templates/components/ReviewsSection";
+import ScrollTracker from "@/templates/components/ScrollTracker";
 
 export default function Home() {
-    const image_section_1_webp = "assets/images/home/home-main-image.jpg";
-    const image_section_1_webp_2x = "assets/images/home/home-main-image.jpg";
+    const image_section_1_webp_2x = "/assets/images/home/home-main-image.jpg";
     const image_section_2_webp = "assets/images/home/home-image-2.webp";
     const image_section_2_png = "assets/images/home/home-image-2.png";
     const image_section_2_webp_2x = "assets/images/home/home-image-2@2x.webp";
@@ -26,8 +26,7 @@ export default function Home() {
 
     return (
         <main className="Home flex flex-col">
-            <ImageSection image_webp={image_section_1_webp}
-                          image_webp_2x={image_section_1_webp_2x}>
+            <ImageSection image_webp_2x={image_section_1_webp_2x}>
                 <div className="row">
                     <div className="col-xs-12">
                         <Title heading_text="<span>LECH-SYSTEM</span> <br>Profesjonalne rolety"
@@ -156,6 +155,7 @@ export default function Home() {
                 </div>
                 <ReviewsSection featurableAPIKey={featurableAPIKey} />
             </SimpleSection>
+            <ScrollTracker />
         </main>
     );
 }
