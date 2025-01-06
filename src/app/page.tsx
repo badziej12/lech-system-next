@@ -50,9 +50,9 @@ export default function Home() {
                         </div>
                         <div className="col-lg-6 col-xs-12">
                             <div className="pt-12">
-                                <Title heading_text="O Nas"
+                                <Title heading_text="O Mnie"
                                        secondary_text="Jestem specjalistą z wieloletnim doświadczeniem w doradztwie
-                    i montażu rolet okiennych oraz moskitier na terenie Kątów Wrocławskich i okolic.
+                    i montażu rolet okiennych, żaluzji oraz moskitier na terenie Kątów Wrocławskich i okolic.
                      Jako jednoosobowa firma oferuję profesjonalną obsługę,
                       indywidualne podejście do każdego klienta oraz wysoką jakość usług.
                        Na mojej stronie znajdziesz bogatą ofertę różnorodnych rolet oraz moskitier,
@@ -84,7 +84,7 @@ export default function Home() {
                 </div>
             </SimpleSection>
             <SimpleSection sectionClass="why-us-section">
-                <Title heading_text="Dlaczego my?" heading_size="42" heading_tag="h2"/>
+                <Title heading_text="Dlaczego ja?" heading_size="42" heading_tag="h2"/>
                 <div className="row">
                     <div
                         className="why-us-section__container why-us-section__container--hide-to-lg col-xs-12 col-md-6 col-lg-4">
@@ -108,9 +108,9 @@ export default function Home() {
                             <picture>
                                 <source type="image/webp"
                                         srcSet={`${image_section_3_webp} 400w, ${image_section_3_webp_2x} 800w`}
-                                        sizes="(max-width: 768px) 400w, 800w"/>
+                                        sizes="(max-width: 767px) 400w, 800w"/>
                                 <img srcSet={`${image_section_3_png} 400w, ${image_section_3_png_2x} 800w`}
-                                     sizes="(max-width: 768px) 400w, 800w" alt=""/>
+                                     sizes="(max-width: 767px) 400w, 800w" alt=""/>
                             </picture>
                         </div>
                     </div>

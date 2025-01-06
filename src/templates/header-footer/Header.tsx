@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import {useEffect, useRef, useState} from 'react';
 import '@/scss/header-footer/header.scss';
 
 import {usePathname} from 'next/navigation';
@@ -13,6 +13,10 @@ export function Header() {
     const handleClick = () => {
         setIsActive(!isActive);
     };
+
+    useEffect(() => {
+        setIsActive(false);
+    }, [pathname]);
 
     return (
         <header className="Header">
