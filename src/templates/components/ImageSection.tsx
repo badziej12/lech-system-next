@@ -18,7 +18,7 @@ export function ImageSection(
     return (
         <section className="ImageSection">
             <div className="ImageSection__bg-img">
-                <Parallax speed={1} id={"parallax"}>
+                <Parallax speed={5} id={"parallax"}>
                     <Image src={image_webp_2x}
                        alt="Hero"
                        quality="100"
