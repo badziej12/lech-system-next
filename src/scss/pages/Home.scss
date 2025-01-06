@@ -109,6 +109,10 @@
         @include media-lg {
           display: none;
         }
+
+        .why-us-section__item {
+          transition-delay: .2s;
+        }
       }
 
       &:first-child {
@@ -125,8 +129,13 @@
     }
 
     &__item {
+      position: relative;
+      left: -25%;
+      opacity: 0;
       color: var(--text-color);
       flex-basis: 50%;
+      transition: .7s;
+      transition-delay: .5s;
 
       @include media-lg {
         flex-basis: auto;
@@ -159,6 +168,11 @@
             font-size: $font-size-sm;
           }
         }
+      }
+
+      &.active {
+        left: 0;
+        opacity: 1;
       }
     }
 

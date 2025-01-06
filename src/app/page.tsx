@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
                 </div>
             </ImageSection>
-            <SimpleSection sectionClass="about-section">
+            <SimpleSection sectionClass="about-section observed-element">
                 <div className="py-48">
                     <div className="row">
                         <div className="col-lg-6 col-xs-12">
@@ -46,7 +46,8 @@ export default function Home() {
                                             srcSet={`${image_section_2_webp} 768w, ${image_section_2_webp_2x} 1368w`}
                                             sizes="(max-width: 768px) 768w, 1368w"/>
                                     <img srcSet={`${image_section_2_png} 768w, ${image_section_2_png_2x} 1368w`}
-                                         sizes="(max-width: 768px) 768w, 1368w" alt=""/>
+                                         sizes="(max-width: 768px) 768w, 1368w"
+                                         alt="O nas"/>
                                 </picture>
                             </div>
                         </div>
@@ -90,14 +91,14 @@ export default function Home() {
                 <div className="row">
                     <div
                         className="why-us-section__container why-us-section__container--hide-to-lg col-xs-12 col-md-6 col-lg-4">
-                        <div className="why-us-section__item">
+                        <div className="why-us-section__item observed-element">
                             <div className="why-us-section__item__content">
                                 <h3>Projesjonalizm i doświadczenie</h3>
                                 <p>Bogate doświadczenie w branży i gwarancja wysokiej jakości świadczonych
                                     usług.</p>
                             </div>
                         </div>
-                        <div className="why-us-section__item">
+                        <div className="why-us-section__item observed-element">
                             <div className="why-us-section__item__content">
                                 <h3>Gwarancja 2-letnia</h3>
                                 <p>Dłuższa gwarancja niż konkurencja, dająca klientom większe poczucie
@@ -117,28 +118,28 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="why-us-section__container col-xs-12 col-md-6 col-lg-4">
-                        <div className="why-us-section__item why-us-section__item--hide-from-lg">
+                        <div className="why-us-section__item why-us-section__item--hide-from-lg observed-element">
                             <div className="why-us-section__item__content">
                                 <h3>Projesjonalizm i doświadczenie</h3>
                                 <p>Bogate doświadczenie w branży i gwarancja wysokiej jakości świadczonych
                                     usług.</p>
                             </div>
                         </div>
-                        <div className="why-us-section__item why-us-section__item--hide-from-lg">
+                        <div className="why-us-section__item why-us-section__item--hide-from-lg observed-element">
                             <div className="why-us-section__item__content">
                                 <h3>Gwarancja 2-letnia</h3>
                                 <p>Dłuższa gwarancja niż konkurencja, dająca klientom większe poczucie
                                     bezpieczeństwa.</p>
                             </div>
                         </div>
-                        <div className="why-us-section__item">
+                        <div className="why-us-section__item observed-element">
                             <div className="why-us-section__item__content">
                                 <h3>Bezpłatne wsparcie klientom</h3>
                                 <p>Kompleksowe doradztwo, pomiary oraz wycena bez dodatkowych opłat
                                     dla klientów.</p>
                             </div>
                         </div>
-                        <div className="why-us-section__item">
+                        <div className="why-us-section__item observed-element">
                             <div className="why-us-section__item__content">
                                 <h3>Galeria realizacji</h3>
                                 <p>Klienci mogą zobaczyć przykłady prac, co ułatwia podjęcie decyzji o współpracy.</p>
