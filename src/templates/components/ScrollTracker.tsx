@@ -26,15 +26,7 @@ const ScrollTracker = () => {
 
     observer.observe(aboutSection);
 
-    const handleScroll = () => {
-      console.log('Current scroll position:', window.scrollY);
-      // imageSection.style.setProperty("--transform-distance", -window.scrollY/2 + "px");
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       observer.unobserve(aboutSection);
     };
   }, []);
