@@ -4,34 +4,34 @@ import { useEffect } from 'react';
 
 const ScrollTracker = () => {
   useEffect(() => {
-    const aboutSection = document.querySelector(".about-section") as HTMLElement;
-    const imageSection = document.querySelector(".ImageSection img") as HTMLElement;
+    const observedElement = Array.from(document.querySelectorAll(".observed-element")) as HTMLElement[];
 
     const handleSectionVisibility = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-
-          console.log("Widać sekcje", entry);
           entry.target.classList.add("active");
         }
       });
     };
 
     const observer = new IntersectionObserver(handleSectionVisibility, {
-      root: null, // domyślnie obserwuje w obrębie całego okna
+      root: null,
       rootMargin: '0px',
-      threshold: 0.5, // Uruchamia funkcję, gdy 50% sekcji jest widoczne
+      threshold: 0.5,
     });
 
-
-    observer.observe(aboutSection);
+    observedElement.forEach((element) => {
+      observer.observe(element);
+    })
 
     return () => {
-      observer.unobserve(aboutSection);
+      observedElement.forEach((element) => {
+        observer.unobserve(element);
+      })
     };
   }, []);
 
-  return null; // Nie musisz renderować niczego wizualnie
+  return null;
 };
 
 export default ScrollTracker;
