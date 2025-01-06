@@ -4,8 +4,6 @@ import SimpleSection from '@/templates/components/SimpleSection';
 import Title from '@/templates/components/Title';
 import Button from "@/templates/components/Button";
 import BannerSection from "@/templates/components/BannerSection";
-import ReviewBox from "@/templates/components/ReviewBox";
-import {ReactGoogleReviews} from "react-google-reviews";
 import ReviewsSection from "@/templates/components/ReviewsSection";
 import ScrollTracker from "@/templates/components/ScrollTracker";
 
@@ -22,7 +20,6 @@ export default function Home() {
     const bg_image_section_4_jpg = "url('assets/images/home/home-image-4.jpg')";
 
     const featurableAPIKey = process.env.FEATURABLE_API_KEY as string;
-    console.log(featurableAPIKey);
 
     return (
         <main className="Home flex flex-col">
