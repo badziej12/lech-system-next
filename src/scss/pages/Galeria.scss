@@ -1,0 +1,70 @@
+@import "../mixins";
+
+.Galeria {
+  padding-top: 4.8rem;
+
+  .gallery-section {
+    &__title {
+      margin-bottom: 9.6rem;
+
+      @include media-md {
+        margin-bottom: 4.8rem;
+      }
+    }
+
+    &__images {
+      display: flex;
+      flex-flow: column wrap;
+      height: 3200px;
+
+      @include media-xxl {
+        height: 220vw;
+      }
+
+      @include media-xl {
+        height: 240vw;
+      }
+
+      @include media-lg {
+        height: 520vw;
+      }
+
+      @include media-md {
+        height: 540vw;
+      }
+
+      @include media-sm {
+        flex-flow: row wrap;
+        height: auto;
+        margin-bottom: 4.8rem;
+      }
+
+      div {
+        width: 33.3%;
+        height: fit-content;
+        padding: .2rem;
+        cursor: pointer;
+        transition: .2s;
+        overflow: hidden;
+
+        @include media-lg {
+          width: 50%;
+        }
+
+        @include media-sm {
+          width: 100%;
+        }
+
+        img {
+          transition: .4s;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

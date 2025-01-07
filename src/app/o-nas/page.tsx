@@ -25,6 +25,7 @@ export default function ONas() {
                                        alt={"O mnie"}
                                        fill
                                        sizes="(max-width: 767px) 90vw, 50vw"
+                                       priority
                                        style={{objectFit: "cover"}}/>
                             </div>
                         </div>

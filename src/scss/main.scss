@@ -4,6 +4,7 @@
 @import 'utils/utils';
 @import 'mixins';
 @import 'vendor/flexboxgrid';
+@import "screen-sizing";
 
 * {
   box-sizing: border-box;
@@ -26,7 +27,11 @@ body {
 }
 
 main {
+  width: 100%;
+  max-width: 2560px;
   margin-top: 9.6rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrapper {
