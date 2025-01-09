@@ -1,5 +1,4 @@
 import '@/scss/header-footer/footer.scss';
-import Link from 'next/link'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelopeOpen} from "@fortawesome/free-regular-svg-icons";
 import {faPhone} from "@fortawesome/free-solid-svg-icons";

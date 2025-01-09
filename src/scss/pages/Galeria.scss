@@ -39,13 +39,16 @@
         margin-bottom: 4.8rem;
       }
 
-      div {
+      .image-container {
         width: 33.3%;
         height: fit-content;
         padding: .2rem;
         cursor: pointer;
         transition: .2s;
-        overflow: hidden;
+
+        div {
+          overflow: hidden;
+        }
 
         @include media-lg {
           width: 50%;
@@ -56,12 +59,12 @@
         }
 
         img {
-          transition: .4s;
+          transition: .6s;
         }
 
         &:hover {
           img {
-            transform: scale(1.1);
+            transform: scale(1.2);
           }
         }
       }

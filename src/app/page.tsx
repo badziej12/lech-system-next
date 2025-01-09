@@ -53,7 +53,7 @@ export default function Home() {
                                 <Title heading_text="O Mnie"
                                        secondary_text="Jestem specjalistą z wieloletnim doświadczeniem w doradztwie
                     i montażu rolet okiennych, żaluzji oraz moskitier na terenie Kątów Wrocławskich i okolic.
-                     Jako jednoosobowa firma oferuję profesjonalną obsługę,
+                     Jako mała rodzinna firma oferujemy profesjonalną obsługę,
                       indywidualne podejście do każdego klienta oraz wysoką jakość usług.
                        Na mojej stronie znajdziesz bogatą ofertę różnorodnych rolet oraz moskitier,
                         które zapewnią Ci prywatność, komfort i ochronę przed insektami. Działam z pasją i zaangażowaniem,
