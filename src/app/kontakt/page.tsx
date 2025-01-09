@@ -2,6 +2,7 @@ import "../../scss/pages/Kontakt.scss";
 import SimpleSection from "@/templates/components/SimpleSection";
 import Title from "@/templates/components/Title";
 import ExpandItems from "@/templates/components/ExpandItems";
+import ContactForm from "@/templates/components/ContactForm";
 
 type Question = {
     key: string;
@@ -54,7 +55,12 @@ export default function Kontakt() {
                 </div>
             </SimpleSection>
             <SimpleSection sectionClass={"contact-form-section"}>
-
+                <div className="center-xs contact-form-section__title">
+                    <Title heading_text={"Nie znalazłeś odpowiedzi?<br> Skontaktuj się z nami!"} heading_size={"42"} heading_tag={"h2"}/>
+                </div>
+                <div className="contact-form-section__container">
+                    <ContactForm/>
+                </div>
             </SimpleSection>
         </main>
     );

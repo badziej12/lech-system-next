@@ -1,0 +1,65 @@
+@import "../font-sizing";
+@import "../mixins";
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  width: 100%;
+  max-width: 800px;
+  padding: 4.8rem 3.2rem;
+  border: .2rem solid var(--page-accent-color);
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: var(--component-light-background);
+      font-size: $font-size-regular;
+      font-family: Gotu, serif;
+      margin-bottom: .8rem;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    input, textarea {
+      color: var(--text-color);
+      font-size: $font-size-sm;
+      padding: 1.6rem;
+      background-color: transparent;
+      border: .1rem solid var(--component-light-background);
+
+      &:focus {
+        border: .1rem solid var(--page-accent-color);
+        outline: none;
+      }
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    border: 0.2rem solid var(--component-light-background);
+    color: var(--component-light-background);
+    font-family: Mulish, serif;
+    font-size: $font-size-regular;
+    padding: 2rem 4rem;
+    transition: 0.2s;
+    min-width: 24rem;
+    text-align: center;
+
+    @include media-md {
+        font-size: $font-size-sm;
+        padding: 1.6rem 3.2rem;
+        min-width: unset;
+        width: 100%;
+      }
+
+    &:hover {
+      border: 0.2rem solid var(--page-accent-color);
+      color: var(--page-accent-color);
+    }
+  }
+}
