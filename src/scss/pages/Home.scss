@@ -3,39 +3,66 @@
 @import '../font-sizing';
 
 .Home {
+  .ImageSection {
+    .Title {
+      margin-bottom: 6rem;
+    }
+  }
+
   .about-section {
     &__image-container {
       display: flex;
       justify-content: center;
+    }
 
-      picture {
-        position: relative;
-        display: inline-block;
+    &__image {
+      position: relative;
+      margin-right: 3.2rem;
 
-        img {
-          max-height: 70rem;
+      @include media-xl {
+        margin-right: 1.6rem;
+      }
 
-          @include media-md {
-            max-height: 50rem;
-          }
+      @include media-lg {
+        margin-right: 0;
+      }
+
+
+      img {
+        aspect-ratio: 3/4;
+        object-fit: cover;
+
+        @include media-lg {
+          width: 100%;
+          max-width: 50rem;
         }
+      }
 
-        &::after {
+      &::after {
           content: '';
           display: block;
           position: absolute;
           inset: 0;
           box-shadow: inset 0 0 20rem 28rem rgb(5 5 5 / 100%);
-          transition: 3.5s;
-        }
+          transition: 2s;
+      }
+    }
+
+    .Title {
+      margin-left: 3.2rem;
+
+      @include media-xl {
+        margin-left: 1.6rem;
+      }
+
+      @include media-lg {
+        margin-left: 0;
       }
     }
 
     &.active {
-      .about-section__image-container {
-        picture::after {
-          box-shadow: inset 0 0 3rem 5rem rgb(5 5 5 / 100%);
-        }
+      .about-section__image::after {
+        box-shadow: inset 0 0 2rem 3rem rgb(5 5 5 / 100%);
       }
     }
   }
@@ -101,6 +128,10 @@
 
       @include media-lg {
         justify-content: space-between;
+      }
+
+      @include media-md {
+        margin-top: 4.8rem;
       }
 
       &--hide-to-lg {
@@ -179,21 +210,16 @@
     &__image-container {
       display: flex;
       justify-content: center;
+      height: 100%;
 
-      picture {
-        display: inline-block;
+      img {
+        width: 100%;
+        max-width: 40rem;
+        object-fit: cover;
 
-        img {
-          max-height: 70rem;
-
-          @include media-md {
-            max-height: 50rem;
-          }
+        @include media-md {
+          max-width: 35rem;
         }
-      }
-
-      @include media-md {
-        margin-bottom: 4.8rem;
       }
     }
   }

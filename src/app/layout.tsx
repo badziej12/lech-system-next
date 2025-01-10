@@ -4,7 +4,6 @@ import "../scss/main.scss";
 
 import {Header} from '@/templates/header-footer/Header';
 import {Footer} from "@/templates/header-footer/Footer";
-import SmoothScroll from "@/templates/components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "LECH-SYSTEM",
@@ -19,11 +18,9 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body>
-        <SmoothScroll>
           <Header />
           {children}
           <Footer />
-        </SmoothScroll>
       </body>
     </html>
   );

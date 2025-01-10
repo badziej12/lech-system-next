@@ -19,6 +19,7 @@
   }
 
   &__content {
+    display: flex;
     justify-content: space-between;
     height: 9.6rem;
   }
@@ -86,6 +87,7 @@
   }
 
   &__navigation {
+    display: flex;
     position: absolute;
     flex-direction: column;
     top: 100%;

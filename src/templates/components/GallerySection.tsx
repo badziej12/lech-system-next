@@ -35,16 +35,18 @@ export function GallerySection(
                       alt={image.alt}
                   >
                       {({ref, open}) => (
-                          <div>
-                              <Image
-                                  ref={ref}
-                                  src={image.original}
-                                  alt={image.alt}
-                                  placeholder={"blur"}
-                                  blurDataURL={image.thumbnail}
-                                  onClick={open}
-                                  width={image.width}
-                                  height={image.height} />
+                          <div className={"image-container"}>
+                              <div>
+                                  <Image
+                                      ref={ref}
+                                      src={image.original}
+                                      alt={image.alt}
+                                      placeholder={"blur"}
+                                      blurDataURL={image.thumbnail}
+                                      onClick={open}
+                                      width={image.width}
+                                      height={image.height} />
+                              </div>
                           </div>
                       )}
                   </Item>

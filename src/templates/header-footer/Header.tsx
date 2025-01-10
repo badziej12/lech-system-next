@@ -1,5 +1,5 @@
 "use client"
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import '@/scss/header-footer/header.scss';
 
 import {usePathname} from 'next/navigation';
