@@ -6,17 +6,12 @@ import Button from "@/templates/components/Button";
 import BannerSection from "@/templates/components/BannerSection";
 import ReviewsSection from "@/templates/components/ReviewsSection";
 import ScrollTracker from "@/templates/components/ScrollTracker";
+import Image from "next/image";
 
 export default function Home() {
     const image_section_1_webp_2x = "/assets/images/home/home-main-image.jpg";
-    const image_section_2_webp = "assets/images/home/home-image-2.webp";
-    const image_section_2_png = "assets/images/home/home-image-2.png";
-    const image_section_2_webp_2x = "assets/images/home/home-image-2@2x.webp";
-    const image_section_2_png_2x = "assets/images/home/home-image-2@2x.png";
-    const image_section_3_webp = "assets/images/home/home-image-3.webp";
-    const image_section_3_png = "assets/images/home/home-image-3.png";
-    const image_section_3_webp_2x = "assets/images/home/home-image-3@2x.webp";
-    const image_section_3_png_2x = "assets/images/home/home-image-3@2x.png";
+    const image_section_2 = "/assets/images/home/home-image-2.jpg";
+    const image_section_3 = "/assets/images/home/home-image-3.jpg";
     const bg_image_section_4_jpg = "url('assets/images/home/home-image-4.jpg')";
 
     const featurableAPIKey = process.env.FEATURABLE_API_KEY as string;
@@ -38,14 +33,9 @@ export default function Home() {
                     <div className="row">
                         <div className="col-lg-6 col-xs-12">
                             <div className="about-section__image-container">
-                                <picture>
-                                    <source type="image/webp"
-                                            srcSet={`${image_section_2_webp} 768w, ${image_section_2_webp_2x} 1368w`}
-                                            sizes="(max-width: 768px) 768w, 1368w"/>
-                                    <img srcSet={`${image_section_2_png} 768w, ${image_section_2_png_2x} 1368w`}
-                                         sizes="(max-width: 768px) 768w, 1368w"
-                                         alt="O nas"/>
-                                </picture>
+                                <div className={"about-section__image"}>
+                                    <Image src={image_section_2} alt={"O nas"} width={1080} height={1080} sizes={"(max-width: 1024px) 90vw, 557px"} />
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-6 col-xs-12">
@@ -105,13 +95,7 @@ export default function Home() {
                     </div>
                     <div className="col-xs-12 col-md-6 col-lg-4">
                         <div className="why-us-section__image-container">
-                            <picture>
-                                <source type="image/webp"
-                                        srcSet={`${image_section_3_webp} 400w, ${image_section_3_webp_2x} 800w`}
-                                        sizes="(max-width: 767px) 400w, 800w"/>
-                                <img srcSet={`${image_section_3_png} 400w, ${image_section_3_png_2x} 800w`}
-                                     sizes="(max-width: 767px) 400w, 800w" alt=""/>
-                            </picture>
+                            <Image src={image_section_3} alt={"Dlaczego my?"} width={711} height={1079} sizes={"(max-width: 768px) 364px, (max-width: 1024px) 416px, 394px"} />
                         </div>
                     </div>
                     <div className="why-us-section__container col-xs-12 col-md-6 col-lg-4">

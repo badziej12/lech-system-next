@@ -13,6 +13,7 @@
 }
 
 html {
+  font-family: Mulish, serif;
   scroll-behavior: smooth;
   height: 100%;
   font-size: 65%;
@@ -24,10 +25,11 @@ body {
   height: 100%;
   min-width: 100%;
   background-color: var(--page-bg-color);
-  font-family: Mulish, serif;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 2560px;
   margin-top: 9.6rem;
@@ -54,4 +56,25 @@ main {
 
   padding-left: 9.6rem;
   padding-right: 9.6rem;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.py-{
+  &48 {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul {
+  list-style: none;
 }

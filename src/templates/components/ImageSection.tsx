@@ -22,8 +22,8 @@ export function ImageSection(
                     <Image src={image_webp_2x}
                        alt="Hero"
                        quality="100"
-                       height="1624"
-                       width="1080"
+                       height={1624}
+                       width={1080}
                        sizes="100vw"
                        style={{objectFit: "cover", height: "100vh", width: "100%", position: "absolute", bottom: "0"}} priority />
                 </Parallax>

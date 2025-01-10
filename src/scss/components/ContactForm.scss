@@ -31,10 +31,15 @@
       padding: 1.6rem;
       background-color: transparent;
       border: .1rem solid var(--component-light-background);
+      font-family: Mulish, serif;
 
       &:focus {
         border: .1rem solid var(--page-accent-color);
         outline: none;
+      }
+
+      &.error {
+        border: .1rem solid var(--error-color);
       }
     }
   }
@@ -42,6 +47,7 @@
   &__button {
     display: inline-block;
     border: 0.2rem solid var(--component-light-background);
+    background-color: transparent;
     color: var(--component-light-background);
     font-family: Mulish, serif;
     font-size: $font-size-regular;
@@ -49,6 +55,7 @@
     transition: 0.2s;
     min-width: 24rem;
     text-align: center;
+    cursor: pointer;
 
     @include media-md {
         font-size: $font-size-sm;
@@ -60,6 +67,28 @@
     &:hover {
       border: 0.2rem solid var(--page-accent-color);
       color: var(--page-accent-color);
+    }
+  }
+
+  .error-message {
+    font-size: $font-size-xs;
+    color: var(--error-color);
+    margin-top: .8rem;
+  }
+
+  .status-message {
+    font-weight: $font-weight-light;
+    font-size: $font-size-sm;
+    color: var(--sucess-color);
+    margin-top: .8rem;
+    text-align: right;
+
+    @include media-md {
+      text-align: center;
+    }
+
+    &.error {
+      color: var(--error-color);
     }
   }
 }
