@@ -25,7 +25,7 @@ export function Footer() {
 
                                 <p className="Footer__contact-container__email">
                                     <FontAwesomeIcon icon={faEnvelopeOpen} />
-                                    <a href="mailto:lech-system@wp.pl">lech-system@wp.pl</a>
+                                    <a href="mailto:lechsystem@wp.pl">lechsystem@wp.pl</a>
                                 </p>
                                 <p className="Footer__contact-container__phone">
                                     <FontAwesomeIcon icon={faPhone} />
