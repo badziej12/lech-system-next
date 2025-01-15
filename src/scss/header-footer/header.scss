@@ -10,15 +10,32 @@
   top: 0;
   z-index: 999;
   background: var(--page-bg-color);
+  
+  &__overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: var(--page-bg-color);
+    opacity: .5;
+
+    &.active {
+      display: block;
+    }
+    
+  }
 
   &__logo {
-    display: block;
-    width: 12rem;
-    height: 5rem;
-    background-color: black;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
   }
 
   &__content {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     height: 9.6rem;
@@ -124,7 +141,7 @@
         color: var(--text-color);
         height: 100%;
         text-decoration: none;
-        padding: 2rem 1.6rem;
+        padding: 3rem 1.6rem;
 
         &:hover,
         &.active {

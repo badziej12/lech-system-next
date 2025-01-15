@@ -1,7 +1,9 @@
 import React from 'react';
 
 import '@/scss/components/ImageSection.scss';
+import '@/templates/components/Parallax';
 import Image from "next/image";
+import Parallax from "@/templates/components/Parallax";
 
 export function ImageSection(
     {
@@ -19,7 +21,7 @@ export function ImageSection(
     return (
         <section className="ImageSection">
             <div className="ImageSection__bg-img">
-                {/*<Parallax speed={5} id={"parallax"}>*/}
+                <Parallax speed={5} id={"parallax"}>
                     <Image src={imageSrc}
                        className={"ImageSection__bg-img__desktop"}
                        alt="Hero"
@@ -36,7 +38,7 @@ export function ImageSection(
                        width={968}
                        sizes="100vw"
                        style={{objectFit: "cover", height: "100vh", width: "100%", position: "absolute", bottom: "0"}} priority />
-                {/*</Parallax>*/}
+                </Parallax>
             </div>
             <div className="container-fluid wrapper ImageSection__content">
                 <div className="ImageSection__content">

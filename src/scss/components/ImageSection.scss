@@ -7,6 +7,11 @@
   max-height: 70rem;
   overflow: hidden;
 
+  @include media-md {
+    height: 80vh;
+    max-height: 80vh;
+  }
+
   &__bg-img {
     position: absolute;
     width: 100%;

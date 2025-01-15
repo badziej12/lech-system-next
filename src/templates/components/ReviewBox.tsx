@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../../scss/components/ReviewBox.scss';
+import Image from "next/image";
 
 type ReviewBoxProps = {
     personNickname: string;
@@ -15,13 +16,12 @@ function ReviewBox(
         personPhotoURL = '',
     }: ReviewBoxProps,
 ) {
-    console.log(personPhotoURL);
     return (
         <div className="ReviewBox">
             <div className="ReviewBox__content">
                 <div className="ReviewBox__heading">
                     <div className="ReviewBox__avatar">
-                        <img src={`/api/proxy-image?url=${personPhotoURL}`} alt="Awatar użytkownika"/>
+                        <Image src={`/api/proxy-image?url=${personPhotoURL}`} width={48} height={48} alt="Awatar użytkownika"/>
                     </div>
                     <h3>{personNickname}</h3>
                 </div>

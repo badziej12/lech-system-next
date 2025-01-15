@@ -4,11 +4,14 @@ import '@/scss/header-footer/header.scss';
 
 import {usePathname} from 'next/navigation';
 import Link from 'next/link'
+import Image from "next/image";
 
 export function Header() {
     const pathname = usePathname();
 
     const [isActive, setIsActive] = useState(false);
+
+    const logoImage = "/assets/images/lech-system-logo.svg";
 
     const handleClick = () => {
         setIsActive(!isActive);
@@ -23,6 +26,7 @@ export function Header() {
             <div className="wrapper">
                 <div className="Header__content flex">
                     <Link className="Header__logo" href="/">
+                        <Image src={logoImage} alt={"Logo Lech-System"} width={291} height={60} />
                     </Link>
                     <div className={`Header__burger-btn ${isActive ? 'active' : ''}`} onClick={handleClick}>
                         <div>
@@ -60,6 +64,7 @@ export function Header() {
                     </ul>
                 </div>
             </div>
+            <div className={`Header__overlay ${isActive ? 'active' : ''}`} onClick={handleClick}></div>
         </header>
     );
 }
