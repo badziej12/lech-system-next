@@ -7,6 +7,7 @@ import BannerSection from "@/templates/components/BannerSection";
 import ReviewsSection from "@/templates/components/ReviewsSection";
 import ScrollTracker from "@/templates/components/ScrollTracker";
 import Image from "next/image";
+import {Stat} from "@/templates/components/Stat";
 
 export default function Home() {
     const imageMainMobile = "/assets/images/home/home-main-image-m.jpg";
@@ -63,16 +64,16 @@ export default function Home() {
                     </div>
                 </div>
             </SimpleSection>
-            <SimpleSection sectionClass="statistic-section">
+            <SimpleSection sectionClass="statistic-section observed-element">
                 <div className="statistic-section__container row">
                     <div className="col-xs-12 col-md-4 col-lg-4">
-                        <p><span>25</span> Lat doświadczenia</p>
+                        <p><Stat target={25} /> Lat doświadczenia</p>
                     </div>
                     <div className="col-xs-12 col-md-4 col-lg-4">
-                        <p><span>90</span> Klientów obsługiwanych rocznie</p>
+                        <p><Stat target={90} /> Klientów obsługiwanych rocznie</p>
                     </div>
                     <div className="col-xs-12 col-md-4 col-lg-4">
-                        <p><span>8</span> Lata doświadczenia</p>
+                        <p><span><Stat target={5} /><span>/5</span></span> Ocena klientów</p>
                     </div>
                 </div>
             </SimpleSection>
