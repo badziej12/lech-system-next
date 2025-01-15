@@ -108,6 +108,10 @@
         @include media-md {
           font-size: $font-size-h2s;
         }
+
+        & > span {
+          display: inline-block;
+        }
       }
     }
   }
