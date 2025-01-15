@@ -9,7 +9,8 @@ import ScrollTracker from "@/templates/components/ScrollTracker";
 import Image from "next/image";
 
 export default function Home() {
-    const image_section_1_webp_2x = "/assets/images/home/home-main-image.jpg";
+    const imageMainMobile = "/assets/images/home/home-main-image-m.jpg";
+    const imageMainDesktop = "/assets/images/home/home-main-image.jpg";
     const image_section_2 = "/assets/images/home/home-image-2.jpg";
     const image_section_3 = "/assets/images/home/home-image-3.jpg";
     const bg_image_section_4_jpg = "url('assets/images/home/home-image-4.jpg')";
@@ -18,7 +19,8 @@ export default function Home() {
 
     return (
         <main className="Home flex flex-col">
-            <ImageSection image_webp_2x={image_section_1_webp_2x}>
+            <ImageSection imageSrc={imageMainDesktop}
+                          imageSrcMobile={imageMainMobile}>
                 <div className="row">
                     <div className="col-xs-12">
                         <Title heading_text="<span>LECH-SYSTEM</span> <br>Profesjonalne rolety"
@@ -34,7 +36,11 @@ export default function Home() {
                         <div className="col-lg-6 col-xs-12">
                             <div className="about-section__image-container">
                                 <div className={"about-section__image"}>
-                                    <Image src={image_section_2} alt={"O nas"} width={1080} height={1080} sizes={"(max-width: 1024px) 90vw, 557px"} />
+                                    <Image src={image_section_2}
+                                           alt={"O nas"}
+                                           width={1080}
+                                           height={1080}
+                                           sizes={"(max-width: 1024px) 90vw, 557px"} />
                                 </div>
                             </div>
                         </div>

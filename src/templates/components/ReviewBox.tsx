@@ -15,13 +15,13 @@ function ReviewBox(
         personPhotoURL = '',
     }: ReviewBoxProps,
 ) {
-
+    console.log(personPhotoURL);
     return (
         <div className="ReviewBox">
             <div className="ReviewBox__content">
                 <div className="ReviewBox__heading">
                     <div className="ReviewBox__avatar">
-                        <img src={personPhotoURL} alt="Awatar użytkownika"/>
+                        <img src={`/api/proxy-image?url=${personPhotoURL}`} alt="Awatar użytkownika"/>
                     </div>
                     <h3>{personNickname}</h3>
                 </div>
