@@ -37,7 +37,7 @@ export default function Home() {
                             <div className="about-section__image-container">
                                 <div className={"about-section__image"}>
                                     <Image src={image_section_2}
-                                           alt={"O nas"}
+                                           alt={"O Nas"}
                                            width={1080}
                                            height={1080}
                                            sizes={"(max-width: 1024px) 90vw, 557px"} />
@@ -46,8 +46,8 @@ export default function Home() {
                         </div>
                         <div className="col-lg-6 col-xs-12">
                             <div className="pt-12">
-                                <Title heading_text="O Mnie"
-                                       secondary_text="Jestem specjalistą z wieloletnim doświadczeniem w doradztwie
+                                <Title heading_text="O Nas"
+                                       secondary_text="Lech-System to firma z wieloletnim doświadczeniem w doradztwie
                     i montażu rolet okiennych, żaluzji oraz moskitier na terenie Kątów Wrocławskich i okolic.
                      Jako mała rodzinna firma oferujemy profesjonalną obsługę,
                       indywidualne podejście do każdego klienta oraz wysoką jakość usług.
@@ -65,22 +65,19 @@ export default function Home() {
             </SimpleSection>
             <SimpleSection sectionClass="statistic-section">
                 <div className="statistic-section__container row">
-                    <div className="col-xs-12 col-md-6 col-lg-3">
-                        <p><span>8</span> Lata doświadczenia</p>
+                    <div className="col-xs-12 col-md-4 col-lg-4">
+                        <p><span>25</span> Lat doświadczenia</p>
                     </div>
-                    <div className="col-xs-12 col-md-6 col-lg-3">
-                        <p><span>8</span> Lata doświadczenia</p>
+                    <div className="col-xs-12 col-md-4 col-lg-4">
+                        <p><span>90</span> Klientów obsługiwanych rocznie</p>
                     </div>
-                    <div className="col-xs-12 col-md-6 col-lg-3">
-                        <p><span>8</span> Lata doświadczenia</p>
-                    </div>
-                    <div className="col-xs-12 col-md-6 col-lg-3">
+                    <div className="col-xs-12 col-md-4 col-lg-4">
                         <p><span>8</span> Lata doświadczenia</p>
                     </div>
                 </div>
             </SimpleSection>
             <SimpleSection sectionClass="why-us-section">
-                <Title heading_text="Dlaczego ja?" heading_size="42" heading_tag="h2"/>
+                <Title heading_text="Dlaczego my?" heading_size="42" heading_tag="h2"/>
                 <div className="row">
                     <div
                         className="why-us-section__container why-us-section__container--hide-to-lg col-xs-12 col-md-6 col-lg-4">
@@ -94,7 +91,7 @@ export default function Home() {
                         <div className="why-us-section__item observed-element">
                             <div className="why-us-section__item__content">
                                 <h3>Gwarancja 2-letnia</h3>
-                                <p>Dłuższa gwarancja niż konkurencja, dająca klientom większe poczucie
+                                <p>Długa gwarancja i serwis pogwarancyjny, dające klientom większe poczucie
                                     bezpieczeństwa.</p>
                             </div>
                         </div>
@@ -115,7 +112,7 @@ export default function Home() {
                         <div className="why-us-section__item why-us-section__item--hide-from-lg observed-element">
                             <div className="why-us-section__item__content">
                                 <h3>Gwarancja 2-letnia</h3>
-                                <p>Dłuższa gwarancja niż konkurencja, dająca klientom większe poczucie
+                                <p>Długa gwarancja i serwis pogwarancyjny, dające klientom większe poczucie
                                     bezpieczeństwa.</p>
                             </div>
                         </div>

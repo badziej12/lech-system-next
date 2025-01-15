@@ -4,6 +4,7 @@ import "../scss/main.scss";
 
 import {Header} from '@/templates/header-footer/Header';
 import {Footer} from "@/templates/header-footer/Footer";
+import {Analytics} from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "LECH-SYSTEM",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <Analytics />
       </body>
     </html>
   );
