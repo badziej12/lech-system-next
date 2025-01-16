@@ -4,8 +4,10 @@ import {faEnvelopeOpen} from "@fortawesome/free-regular-svg-icons";
 import {faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faLocationDot} from "@fortawesome/free-solid-svg-icons";
 import {faFacebook} from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 
 export function Footer() {
+    const logoImage = "/assets/images/lech-system-logo.svg";
 
     return (
         <footer className="Footer">
@@ -37,19 +39,28 @@ export function Footer() {
                     <div className="col-xs-4 col-md-4">
                         <h3 className="Footer__heading">Menu</h3>
                         <ul>
-                            <li><a href="">Strona główna</a></li>
-                            <li><a href="">O nas</a></li>
-                            <li><a href="">Oferta</a></li>
-                            <li><a href="">Galeria</a></li>
-                            <li><a href="">Kontakt</a></li>
+                            <li><a href="/">Strona główna</a></li>
+                            <li><a href="/o-nas">O nas</a></li>
+                            <li><a href="/oferta">Oferta</a></li>
+                            <li><a href="/galeria">Galeria</a></li>
+                            <li><a href="/kontakt">Kontakt</a></li>
                         </ul>
                     </div>
-                    <div className="col-xs-12 col-md-4 Footer__socials">
-                        <h3 className="Footer__heading">Social media</h3>
-                        <a href="https://www.facebook.com/roletylechsystem"><FontAwesomeIcon icon={faFacebook} /></a>
+                    <div className="col-xs-12 col-md-4">
+                        <div className="row">
+                            <div className="col-xs-12 Footer__socials">
+                                <h3 className="Footer__heading">Social media</h3>
+                                <a href="https://www.facebook.com/roletylechsystem"><FontAwesomeIcon icon={faFacebook}/></a>
+                            </div>
+                            <div className="col-xs-12 Footer__logo">
+                                <a href="/">
+                                    <Image src={logoImage} alt={"Logo Lech-System"} width={291} height={60} />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    );
+    </footer>
+);
 }

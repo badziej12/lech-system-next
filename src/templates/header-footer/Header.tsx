@@ -10,6 +10,8 @@ export function Header() {
     const pathname = usePathname();
 
     const [isActive, setIsActive] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const logoImage = "/assets/images/lech-system-logo.svg";
 
@@ -21,13 +23,30 @@ export function Header() {
         setIsActive(false);
     }, [pathname]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
     return (
-        <header className="Header">
+        <header className={`Header ${isActive ? 'active' : ''} ${isVisible ? "" : "visible"}`}>
             <div className="wrapper">
                 <div className="Header__content flex">
-                    <Link className="Header__logo" href="/">
-                        <Image src={logoImage} alt={"Logo Lech-System"} width={291} height={60} />
-                    </Link>
                     <div className={`Header__burger-btn ${isActive ? 'active' : ''}`} onClick={handleClick}>
                         <div>
                             <span></span>

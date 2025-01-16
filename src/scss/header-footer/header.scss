@@ -10,6 +10,16 @@
   top: 0;
   z-index: 999;
   background: var(--page-bg-color);
+
+  @include media-md {
+    transition: .2s;
+  }
+
+  &.visible:not(.active) {
+    @include media-md {
+      transform : translateY(-100%);
+    }
+  }
   
   &__overlay {
     display: none;
@@ -27,17 +37,11 @@
     
   }
 
-  &__logo {
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-  }
-
   &__content {
     position: relative;
     z-index: 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     height: 9.6rem;
   }
 
@@ -49,7 +53,7 @@
     width: 6.8rem;
     cursor: pointer;
 
-    @include media-lg {
+    @include media-md {
       display: flex;
     }
 
@@ -119,7 +123,7 @@
       max-height: 100vh;
     }
 
-    @media screen and (width >= 1024px) {
+    @media screen and (width >= 768px) {
       position: static;
       flex-direction: row;
       height: 100%;
