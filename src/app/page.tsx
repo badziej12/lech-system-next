@@ -32,7 +32,7 @@ export default function Home() {
                 </div>
             </ImageSection>
             <SimpleSection sectionClass="about-section observed-element">
-                <div className="py-48">
+                <div>
                     <div className="row">
                         <div className="col-lg-6 col-xs-12">
                             <div className="about-section__image-container">

@@ -10,6 +10,12 @@
   }
 
   .about-section {
+    padding: 9.6rem 0;
+
+    @include media-md {
+      padding: 4.8rem 0;
+    }
+
     &__image-container {
       display: flex;
       justify-content: center;
@@ -86,8 +92,8 @@
     color: var(--page-primary-color);
 
     &__container {
-      @include media-lg {
-        row-gap: 3.2rem;
+      @include media-md {
+        row-gap: 6.4rem;
       }
     }
 
