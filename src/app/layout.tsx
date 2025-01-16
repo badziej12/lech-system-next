@@ -9,12 +9,12 @@ import {Analytics} from "@vercel/analytics/next";
 const ogImage = "/assets/images/og-image-ls.png";
 
 export const metadata: Metadata = {
-  title: "LECH-SYSTEM",
-  description: "Rolety, żaluzje i moskitiery na wymiar z profesjonalnym montażem. Działamy w Kątach Wrocławskich i okolicach, oferując bezpłatny dojazd, pomiar i doradztwo. Gwarancja jakości – 2 lata!",
-  keywords: "rolety, żaluzje, moskitiery, Kąty Wrocławskie, montaż, na wymiar",
+  title: "LECH-SYSTEM | Rolety, żaluzje i moskietiery | Kąty Wrocławskie",
+  description: "Rolety, żaluzje i moskitiery na wymiar z profesjonalnym montażem. Obejmujemy w Kąty Wrocławskie, Wrocław i okolice, oferując bezpłatny dojazd, pomiar i doradztwo. Gwarancja jakości – 2 lata!",
+  keywords: "rolety, żaluzje, moskitiery, Kąty Wrocławskie, Wrocław, montaż, na wymiar",
   robots: "index, follow",
   openGraph: {
-    title: "LECH-SYSTEM - Rolety, Żaluzje, Moskitiery, Meble na Wymiar",
+    title: "LECH-SYSTEM - Rolety, Żaluzje, Moskitiery",
     description: "Oferujemy szeroką gamę produktów na wymiar, takich jak rolety, żaluzje i moskitiery. Sprawdź naszą ofertę i skontaktuj się z nami!",
     images: ogImage,
     url: "https://www.lech-system.pl",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "LECH-SYSTEM - Rolety, Żaluzje, Moskitiery, Meble na Wymiar",
-    description: "Oferujemy produkty na wymiar z profesjonalnym montażem. Sprawdź naszą ofertę i skontaktuj się z nami!",
+    description: "Oferujemy rolety, żaluzje i moskitiery na wymiar z profesjonalnym montażem. Sprawdź naszą ofertę i skontaktuj się z nami!",
     images: ogImage,
   },
   authors: {name: "Błażej Tondel"}
