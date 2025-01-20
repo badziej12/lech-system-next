@@ -3,6 +3,13 @@ import SimpleSection from "@/templates/components/SimpleSection";
 import Title from "@/templates/components/Title";
 import 'photoswipe/dist/photoswipe.css'
 import GallerySection from "@/templates/components/GallerySection";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.lech-system.pl/galeria",
+  },
+};
 
 type GalleryImage = {
     key: string;

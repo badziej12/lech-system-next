@@ -4,6 +4,14 @@ import SimpleSection from "@/templates/components/SimpleSection";
 import ProductBox from "@/templates/components/ProductBox";
 import BannerSection from "@/templates/components/BannerSection";
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.lech-system.pl/oferta",
+  },
+};
+
 export default function Oferta() {
     const product_1_image = "/assets/images/offer/zaluzje-poziome-pokoj.jpg";
     const product_2_image = "/assets/images/offer/zaluzje-pionowe-1.jpg";
