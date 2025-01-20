@@ -26,7 +26,10 @@ export const metadata: Metadata = {
     description: "Oferujemy rolety, żaluzje i moskitiery na wymiar z profesjonalnym montażem. Sprawdź naszą ofertę i skontaktuj się z nami!",
     images: ogImage,
   },
-  authors: {name: "Błażej Tondel"}
+  authors: {name: "Błażej Tondel"},
+  alternates: {
+    canonical: "https://www.lech-system.pl",
+  }
 };
 
 export default function RootLayout({

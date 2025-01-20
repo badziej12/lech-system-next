@@ -3,6 +3,13 @@ import SimpleSection from "@/templates/components/SimpleSection";
 import Title from "@/templates/components/Title";
 import ExpandItems from "@/templates/components/ExpandItems";
 import ContactForm from "@/templates/components/ContactForm";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.lech-system.pl/kontakt",
+  },
+};
 
 type Question = {
     key: string;

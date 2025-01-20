@@ -4,6 +4,13 @@ import Title from "@/templates/components/Title";
 import Image from "next/image";
 import BannerSection from "@/templates/components/BannerSection";
 import ScrollTracker from "@/templates/components/ScrollTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.lech-system.pl/o-nas",
+  },
+};
 
 export default function ONas() {
     const aboutImage1 = "/assets/images/about/o-firmie.jpg";

@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Host
+Host: https://www.lech-system.pl
+
+# Sitemaps
+Sitemap: https://www.lech-system.pl/sitemap.xml
